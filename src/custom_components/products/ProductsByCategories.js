@@ -5,18 +5,18 @@ import SELECTED_CATEGORIES_QUERY from '../../apollo/client_state/graphql/selecte
 import makeCustomProducts from '../../generate_components/makeCustomProducts'
 import PRODUCT_BY_CATEGORIES_QUERY from '../../graphql/query/products/getProductsByCategories'
 
-class CustomProducts extends Component {
+class ProductsByCategories extends Component {
     render() {
         const { loading, error, selectedCategories } = this.props.data
         if (loading) {
             return null
         }
         if (error) {
-            return null
+            return JSON.stringify(error)
         }
-        const C = makeCustomProducts(PRODUCT_BY_CATEGORIES_QUERY, selectedCategories)
+        const C = makeCustomProducts(PRODUCT_BY_CATEGORIES_QUERY, { categories: selectedCategories._id })
         return <C {...this.props} />
     }
 }
 
-export default compose(graphql(SELECTED_CATEGORIES_QUERY))(CustomProducts)
+export default compose(graphql(SELECTED_CATEGORIES_QUERY))(ProductsByCategories)

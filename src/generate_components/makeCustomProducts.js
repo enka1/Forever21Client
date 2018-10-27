@@ -16,4 +16,4 @@ class CustomProducts extends Component {
     }
 }
 
-export default (query, variables = null) => compose(graphql(query, { options: { variables } }))(CustomProducts)
+export default (query, variables) => compose(graphql(query, { options: { variables } }))(CustomProducts)

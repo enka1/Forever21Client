@@ -7,7 +7,7 @@ export default class Detail extends Component {
                 <div className="row">
                     <div className="col-3 p-0">
                         <div className="font__poppins border-bottom pb-2 d-flex mb-3" data-toggle="collapse" data-target="#moreImages">
-                            More Images <span className="ml-auto d-block"><i className="fas fa-xs fa-plus"></i></span>
+                            More Images <span className="ml-auto d-block"><img width="h5" src="https://image.flaticon.com/icons/svg/149/149156.svg" alt=""/></span>
                         </div>
                         <div class="collapse show" id="moreImages">
                             <div className="row m-0 mb-3">

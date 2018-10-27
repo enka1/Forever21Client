@@ -9,6 +9,7 @@ import Routes from '../routes'
 import clientState from './client_state'
 
 export const cache = new InMemoryCache()
+
 const client = new ApolloClient({
     link: ApolloLink.from([clientState, new HttpLink({ uri: '/graphql' })]),
     cache

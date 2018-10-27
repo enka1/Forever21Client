@@ -1,10 +1,10 @@
-import { Query as SelectedCategoryQuery, Mutation as SelectedCategoryMutation } from './graphql/selectedCategories/resolve'
+import { Query as SelectedCategoriesQuery, Mutation as SelectedCategoriesMutation } from './graphql/selectedCategories/resolve'
 
 export default {
     Query: {
-        ...SelectedCategoryQuery
+        ...SelectedCategoriesQuery
     },
     Mutation: {
-        ...SelectedCategoryMutation
+        ...SelectedCategoriesMutation
     }
 }

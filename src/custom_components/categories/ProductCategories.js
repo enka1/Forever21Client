@@ -6,8 +6,17 @@ import CATEGORIES_QUERY from '../../graphql/query/categories/getCategories'
 import UPDATE_SELECTED_CATEGORIES_MUTATION from '../../apollo/client_state/graphql/selectedCategories/mutation'
 
 class ProductCategory extends Component {
-    updateSelectedCategories(variables) {
-        this.props.updateSelectedCategories(variables)
+    constructor(props) {
+        super(props)
+        this.updateSelectedCategories = this.updateSelectedCategories.bind(this)
+    }
+
+    updateSelectedCategories(ids) {
+        this.props.updateSelectedCategories({
+            variables: {
+                id: ids
+            }
+        })
     }
     render() {
         const { error, loading, categories } = this.props.categories
@@ -17,7 +26,7 @@ class ProductCategory extends Component {
         else if (error) {
             return null
         }
-        return <Category categories={categories} />
+        return <Category updateSelectedCategories={this.updateSelectedCategories} categories={categories} />
     }
 }
 

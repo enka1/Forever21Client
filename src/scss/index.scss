@@ -2,19 +2,15 @@
     &__poppins {
         font-family: 'Poppins', sans-serif;
     }
-
     &__oswald {
         font-family: 'Oswald', sans-serif;
     }
-
     &__raleway {
         font-family: 'Raleway', sans-serif;
     }
-
     &__montserrat {
         font-family: 'Montserrat', sans-serif;
     }
-
     &__lato {
         font-family: 'Lato', sans-serif;
     }
@@ -27,7 +23,6 @@
         letter-spacing: .1rem;
         text-transform: uppercase;
     }
-
     &__subtitle {
         font-size: .7rem;
         letter-spacing: .05rem;
@@ -43,7 +38,6 @@
         font-size: 3rem;
         color: #fff;
     }
-
     &__sub-title {
         font-size: 1.2rem;
         letter-spacing: 0.2rem;
@@ -67,7 +61,6 @@
         color: #23232c;
         background-color: #fff;
     }
-
     &__item--active {
         width: 2rem;
         height: 2rem;
@@ -95,7 +88,6 @@
         font-size: .8rem;
         letter-spacing: .05rem;
     }
-
     &__price {
         font-size: .7rem;
         color: #e7b2ae;
@@ -107,18 +99,15 @@
     &__header {
         letter-spacing: .09rem;
     }
-
     &__item {
         color: #666;
         font-size: .8rem;
         border-bottom: 1px dotted #e5e5e5
     }
-
     &__item:hover {
         cursor: pointer;
         color: #ba68c8;
     }
-
     &__item--active {
         font-size: .8rem;
         border-bottom: 1px dotted #e5e5e5;
@@ -136,7 +125,6 @@
         letter-spacing: .06rem;
         font-size: 1.2rem;
     }
-
     &__box {
         padding: 0 1rem;
     }
@@ -149,7 +137,6 @@
     font-size: 2rem;
     letter-spacing: .2rem
 }
-
 
 ::-webkit-scrollbar {
     width: 10px;

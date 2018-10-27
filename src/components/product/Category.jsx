@@ -12,11 +12,13 @@ export default class ProductCategory extends Component {
     this.setState({
       selected: id
     })
+    this.props.updateSelectedCategories(id)
   }
 
   generateCategory(categories) {
     return categories.map(category => (
-      <p key={category._id}
+      <p
+        key={category._id}
         onClick={() => this.onClickHandle(category._id)}
         className={
           "font__poppins py-3 " + (this.state.selected === category._id ? "category__item--active" : "category__item")
@@ -36,7 +38,7 @@ export default class ProductCategory extends Component {
         <div className="divider mb-3"></div>
         <p
           className={"font__poppins py-3 " + (selected === 0 ? "category__item--active" : "category__item")}
-          onClick={() => this.onClickHandle(0)}
+          onClick={() => this.onClickHandle([])}
         >
           All
         </p>

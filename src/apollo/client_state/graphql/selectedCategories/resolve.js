@@ -1,22 +1,24 @@
-import SELECTED_CATEGORY_QUERY from './query'
+import SELECTED_CATEGORIES_QUERY from './query'
 
 export const Query = {
-    selectedCategory: (_, __, { cache }) => {
-        console.log(cache.readQuery({
-            query: SELECTED_CATEGORY_QUERY
-        }))
-        return cache.readQuery({
-            query: SELECTED_CATEGORY_QUERY
-        })
-    }
+    // selectedCategories: (_, __, { cache }) => {
+    //     return cache.readQuery({
+    //         query: SELECTED_CATEGORIES_QUERY
+    //     })
+    // }
 }
 
 export const Mutation = {
-    updateSelectedCategory: (_, args, { cache }) => {
-        cache.writeQuery({
-            query: SELECTED_CATEGORY_QUERY,
-            data: args
+    updateSelectedCategories: (_, { id }, { cache }) => {
+        let { selectedCategories } = cache.readQuery({
+            query: SELECTED_CATEGORIES_QUERY
         })
-        return args
+        cache.writeQuery({
+            query: SELECTED_CATEGORIES_QUERY,
+            data: {
+                selectedCategories: { ...selectedCategories, _id: id }
+            }
+        })
+        return null
     }
 }
