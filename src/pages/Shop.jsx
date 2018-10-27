@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ProductCategory from '../custom_components/categories/ProductCategories'
-import ProductsByCategory from '../custom_components/products/ProductsByCategory'
+import ProductsByCategory from '../custom_components/products/ProductsByCategories'
 import Paginate from '../components/Paginate'
 
 export default class Shop extends Component {

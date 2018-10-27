@@ -10,10 +10,7 @@ import clientState from './client_state'
 
 export const cache = new InMemoryCache()
 const client = new ApolloClient({
-    link: ApolloLink.from(
-        [new HttpLink({ uri: '/graphql' })],
-        clientState
-    ),
+    link: ApolloLink.from([clientState, new HttpLink({ uri: '/graphql' })]),
     cache
 })
 

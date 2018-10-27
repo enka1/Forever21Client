@@ -1,4 +1,4 @@
-import selectedCategoryDefault from './graphql/selectedCategory/default'
+import selectedCategoryDefault from './graphql/selectedCategories/default'
 
 export default {
     ...selectedCategoryDefault

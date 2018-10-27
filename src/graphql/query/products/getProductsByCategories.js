@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
 
-export default gql`
+export default gql `
 query ProductsByCategory ($categories: [String]){
   products(where: {categories: $categories}) {
     _id
