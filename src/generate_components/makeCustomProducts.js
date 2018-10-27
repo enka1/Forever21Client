@@ -8,14 +8,14 @@ export default (query, variables = null) => {
         render() {
             return (
                 <Query query={query} variables={variables}>
-                    {({ error, loading, data: { products } }) => {
+                    {({ error, loading, data }) => {
                         if (error) {
                             return null
                         }
                         if (loading) {
                             return null
                         }
-                        return <Products products={products} {...this.props} />
+                        return <Products products={data.products} {...this.props} />
                     }}
                 </Query>
             )

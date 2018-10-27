@@ -4,14 +4,24 @@ export default class ProductCategory extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedId: 1
+      selected: 0
     }
+  }
+
+  onClickHandle(id) {
+    this.setState({
+      selected: id
+    })
   }
 
   generateCategory(categories) {
     return categories.map(category => (
-      <p key={category.Id} onClick={() => this.catgoryOnClickHandkle(category.Id)}
-        className="font__poppins category__item py-3">
+      <p key={category._id}
+        onClick={() => this.onClickHandle(category._id)}
+        className={
+          "font__poppins py-3 " + (this.state.selected === category._id ? "category__item--active" : "category__item")
+        }
+      >
         {category.name}
       </p>
     ))
@@ -19,12 +29,15 @@ export default class ProductCategory extends Component {
 
   render() {
     const categories = this.props.categories || []
+    const selected = this.state.selected
     return (
       <div>
         <p className="font__oswald category__header">Categories</p>
         <div className="divider mb-3"></div>
         <p
-          className="font__poppins category__item py-3">
+          className={"font__poppins py-3 " + (selected === 0 ? "category__item--active" : "category__item")}
+          onClick={() => this.onClickHandle(0)}
+        >
           All
         </p>
         {this.generateCategory(categories)}
