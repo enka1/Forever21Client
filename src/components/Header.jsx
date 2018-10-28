@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 
-import Menu from './Menu'
-
+import { history } from '../routes'
+import Search from './product/Search'
 export default class Header extends Component {
   render() {
     return (
-      <div className="d-flex justify-content-center pt-3">
-        <div className="">
-          <img className="mx-auto d-block" width="55rem" src="https://image.flaticon.com/icons/svg/29/29362.svg" alt="" />       
-          <span className="header__title mt-2 d-block text-center font__raleway">Maruko</span>
-          <span className="header__subtitle d-block text-center font__montserrat text-muted">Fashion store</span>
-          <Menu className="p-0 mt-4 mx-auto"/>
+      <div className="d-flex align-items-center py-3 container">
+        <div className="d-flex align-items-center">
+          <img className="brand__logo mr-2" src="https://image.flaticon.com/icons/svg/214/214344.svg" alt="" />
+          <span className="brand__name font__lato">Enko</span>
         </div>
+        <ul className="m-0 p-0">
+          <li className="list-inline-item primary-menu-item font__poppins mx-4" onClick={() => history.push('/')}>Home</li>
+          <li className="list-inline-item primary-menu-item font__poppins mx-4" onClick={() => history.push('/shop')}>Shop</li>
+          <li className="list-inline-item primary-menu-item font__poppins mx-4">Collections</li>
+          <li className="list-inline-item primary-menu-item font__poppins mx-4">Contact Us</li>
+        </ul>
+        <Search/>
       </div>
     )
   }

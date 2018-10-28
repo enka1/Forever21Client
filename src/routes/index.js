@@ -34,7 +34,7 @@ export default class extends Component {
         return (
             <div>
                 <Header />
-                <Carousel className="mt-2" />
+                <Carousel className="" />
                 <Router history={history}>
                     <Switch>
                         <Route exact path="/" component={Home} />

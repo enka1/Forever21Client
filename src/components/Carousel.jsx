@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const CarouselItem = styled.div`
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 65vh;
+    max-height: 65vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)) ,url(${props => props.url});
     background-position: center;
     background-attachment: fixed;

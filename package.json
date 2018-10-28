@@ -20,10 +20,12 @@
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0",
     "styled-components": "^4.0.2"
   },
   "scripts": {
-    "develop": "react-scripts start | node-sass -w src/scss -o src/styles",
+    "watch": "node-sass -w src/scss -o src/styles",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
