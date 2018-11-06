@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 export default class ProductCategory extends Component {
   constructor(props) {
@@ -9,10 +9,10 @@ export default class ProductCategory extends Component {
   }
 
   onClickHandle(id) {
-    this.setState({
-      selected: id
-    })
-    this.props.updateSelectedCategories(id)
+    this.setState({selected: id})
+    this
+      .props
+      .updateSelectedCategories(id)
   }
 
   generateCategory(categories) {
@@ -20,10 +20,9 @@ export default class ProductCategory extends Component {
       <p
         key={category._id}
         onClick={() => this.onClickHandle(category._id)}
-        className={
-          "font__poppins py-3 " + (this.state.selected === category._id ? "category__item--active" : "category__item")
-        }
-      >
+        className={"font__poppins py-3 " + (this.state.selected === category._id
+        ? "category__item--active"
+        : "category__item")}>
         {category.name}
       </p>
     ))
@@ -37,9 +36,10 @@ export default class ProductCategory extends Component {
         <p className="font__oswald category__header">Categories</p>
         <div className="divider mb-3"></div>
         <p
-          className={"font__poppins py-3 " + (selected === 0 ? "category__item--active" : "category__item")}
-          onClick={() => this.onClickHandle([])}
-        >
+          className={"font__poppins py-3 " + (selected === 0
+          ? "category__item--active"
+          : "category__item")}
+          onClick={() => this.onClickHandle(null)}>
           All
         </p>
         {this.generateCategory(categories)}

@@ -67,14 +67,25 @@
   cursor: pointer;
   color: #e7b2ae; }
 
-.product__name {
-  font-size: .8rem;
-  letter-spacing: .05rem; }
-
-.product__price {
-  font-size: .7rem;
-  color: #e7b2ae;
-  letter-spacing: .02rem; }
+.product {
+  cursor: pointer;
+  position: relative; }
+  .product__name {
+    font-size: .8rem;
+    letter-spacing: .05rem;
+    cursor: pointer; }
+  .product__price {
+    font-size: .8rem;
+    letter-spacing: .02rem;
+    color: #e7b2ae; }
+  .product__img {
+    width: 100%; }
+  .product__quick-view {
+    font-size: .7rem;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .category__header {
   letter-spacing: .09rem; }

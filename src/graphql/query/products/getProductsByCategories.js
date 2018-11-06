@@ -1,12 +1,14 @@
 import gql from 'graphql-tag'
 
 export default gql `
-query ProductsByCategory ($categories: [String]){
-  products(where: {categories: $categories}) {
+query ($criteria: ProductInput, $skip: Int, $limit: Int, $sort: [ProductSortCases]) {
+  products(criteria: $criteria, sort: $sort, skip: $skip, limit: $limit) {
     _id
     name
     exportPrice
-		img
+    patterns {
+      images
+    }
   }
 }
 `

@@ -1,6 +1,6 @@
 export default {
-    selectedCategories: {
-        __typename: "SELECTED_CATEGORIES",
-        _id: []
-    }
+   selectedCategories: {
+      __typename: "SELECTED_CATEGORIES",
+      id: null
+   }
 }

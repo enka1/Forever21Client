@@ -11,10 +11,10 @@ class ProductCategory extends Component {
         this.updateSelectedCategories = this.updateSelectedCategories.bind(this)
     }
 
-    updateSelectedCategories(ids) {
+    updateSelectedCategories(id) {
         this.props.updateSelectedCategories({
             variables: {
-                id: ids
+                id
             }
         })
     }

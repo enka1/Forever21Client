@@ -6,17 +6,25 @@ import makeCustomProducts from '../../generate_components/makeCustomProducts'
 import PRODUCT_BY_CATEGORIES_QUERY from '../../graphql/query/products/getProductsByCategories'
 
 class ProductsByCategories extends Component {
-    render() {
-        const { loading, error, selectedCategories } = this.props.data
-        if (loading) {
-            return null
-        }
-        if (error) {
-            return JSON.stringify(error)
-        }
-        const C = makeCustomProducts(PRODUCT_BY_CATEGORIES_QUERY, { categories: selectedCategories._id })
-        return <C {...this.props} />
-    }
+   render() {
+      const { loading, error, selectedCategories } = this.props.data
+      if (loading) {
+         return null
+      }
+      if (error) {
+         return JSON.stringify(error)
+      }
+      if (selectedCategories) {
+         let { id } = selectedCategories
+         const C = makeCustomProducts(PRODUCT_BY_CATEGORIES_QUERY, {
+            criteria: {
+               categories: id
+            }
+         })
+         return <C { ...this.props }/>
+      }
+      return null
+   }
 }
 
 export default compose(graphql(SELECTED_CATEGORIES_QUERY))(ProductsByCategories)

@@ -23,7 +23,7 @@ export default class ProductCategory extends Component {
                         <img width="8px" src={this.state.isSizeOpen ? "https://image.flaticon.com/icons/svg/59/59549.svg" : "https://image.flaticon.com/icons/svg/149/149156.svg"} alt="" />
                     </span>
                 </div>
-                <div className="collapse" id="size">
+                <div className="collapse show" id="size">
                     <div className="row m-0">
                         <Checkbox className="font__poppins text-muted col-6 m-0 mb-3" style={{ fontSize: ".8rem" }}>XS</Checkbox>
                         <Checkbox className="font__poppins text-muted col-6 m-0 mb-3" style={{ fontSize: ".8rem" }}>S</Checkbox>
@@ -39,7 +39,7 @@ export default class ProductCategory extends Component {
                         <img width="8px" src={this.state.isColorOpen ? "https://image.flaticon.com/icons/svg/59/59549.svg" : "https://image.flaticon.com/icons/svg/149/149156.svg"} alt="" />
                     </span>
                 </div>
-                <div className="collapse" id="color">
+                <div className="collapse show" id="color">
                     <div className="row m-0">
                         <Checkbox className="font__poppins text-muted col-6 m-0 mb-3" style={{ fontSize: ".8rem" }}>black</Checkbox>
                         <Checkbox className="font__poppins text-muted col-6 m-0 mb-3" style={{ fontSize: ".8rem" }}>brown</Checkbox>

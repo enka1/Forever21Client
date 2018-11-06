@@ -1,9 +1,9 @@
 import gql from 'graphql-tag'
 
-export default gql`
+export default gql `
     mutation updateSelectedCategories($id: [String]) {
         updateSelectedCategories(id: $id) @client {
-            _id
+            id
         }
     }
 `

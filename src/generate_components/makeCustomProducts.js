@@ -5,6 +5,7 @@ import Products from '../components/product/Products'
 
 class CustomProducts extends Component {
     render() {
+        console.log(this.props)
         const { error, loading, products } = this.props.data
         if (error) {
             return null
